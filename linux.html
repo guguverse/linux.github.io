@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Terminal</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="desktop" id="desktop">
+        <!-- Окно терминала -->
+        <div class="terminal" id="terminal">
+            <div class="terminal-header" id="terminal-header">
+                <div class="buttons">
+                    <span class="btn close" id="btn-close" title="Закрыть"></span>
+                    <span class="btn minimize" id="btn-minimize" title="Свернуть"></span>
+                    <span class="btn maximize" id="btn-maximize" title="Развернуть"></span>
+                </div>
+                <div class="title">user@linux: ~</div>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="line">Welcome to Linux Web Terminal v1.1</div>
+                <div class="line">Введите <span class="highlight">help</span> для списка команд.</div>
+                <div class="line">Введите <span class="highlight">easy linux</span> чтобы открыть рабочий стол.</div>
+                <br>
+            </div>
+            <div class="terminal-input">
+                <span class="prompt">user@linux:~$</span>
+                <input type="text" id="command-input" autocomplete="off" autofocus>
+            </div>
+        </div>
+
+        <!-- Иконка в трее для восстановления свёрнутого окна -->
+        <div class="tray-icon" id="tray-icon" title="Восстановить терминал">
+            <span>&gt;_</span>
+        </div>
+
+        <!-- Рабочий стол Easy Linux -->
+        <div class="easy-desktop" id="easy-desktop">
+            <div class="easy-header">
+                <span>Easy Linux — Рабочий стол</span>
+                <button class="easy-close" id="easy-close">✕ Закрыть рабочий стол</button>
+            </div>
+            <div class="easy-icons" id="easy-icons">
+                <!-- Ярлыки будут сгенерированы через JS -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
